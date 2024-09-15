@@ -25,7 +25,7 @@ jobs:
         for service in "${services[@]}"; do
           docker build -t your-dockerhub-username/$service:latest ./$service
           docker push your-dockerhub-username/$service:latest 
-        done
+        done 
 
     - name: Set up Kubernetes CLI
       uses: azure/setup-kubectl@v1
